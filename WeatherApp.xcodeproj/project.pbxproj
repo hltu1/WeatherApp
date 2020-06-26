@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A04557E24A670B300C6B572 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A04557D24A670B300C6B572 /* Temperature.swift */; };
+		2A04558024A6712400C6B572 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A04557F24A6712400C6B572 /* Date.swift */; };
+		2A04558224A6792D00C6B572 /* ThreeFieldVerticalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A04558124A6792D00C6B572 /* ThreeFieldVerticalContainer.swift */; };
 		2A1A11FA24A60410009370B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A11F924A60410009370B5 /* AppDelegate.swift */; };
 		2A1A11FC24A60410009370B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A11FB24A60410009370B5 /* SceneDelegate.swift */; };
 		2A1A11FE24A60410009370B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A11FD24A60410009370B5 /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A04557D24A670B300C6B572 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		2A04557F24A6712400C6B572 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		2A04558124A6792D00C6B572 /* ThreeFieldVerticalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeFieldVerticalContainer.swift; sourceTree = "<group>"; };
 		2A1A11F624A60410009370B5 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1A11F924A60410009370B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A1A11FB24A60410009370B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A04557B24A6708500C6B572 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2A04557C24A6709100C6B572 /* class */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2A04557C24A6709100C6B572 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				2A04557D24A670B300C6B572 /* Temperature.swift */,
+				2A04557F24A6712400C6B572 /* Date.swift */,
+				2A04558124A6792D00C6B572 /* ThreeFieldVerticalContainer.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
 		2A1A11ED24A60410009370B5 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1A11F924A60410009370B5 /* AppDelegate.swift */,
+				2A04557B24A6708500C6B572 /* src */,
 				2A1A11FB24A60410009370B5 /* SceneDelegate.swift */,
 				2A1A11FD24A60410009370B5 /* ViewController.swift */,
 				2A1A11FF24A60410009370B5 /* Main.storyboard */,
@@ -260,8 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1A11FE24A60410009370B5 /* ViewController.swift in Sources */,
+				2A04558024A6712400C6B572 /* Date.swift in Sources */,
 				2A1A11FA24A60410009370B5 /* AppDelegate.swift in Sources */,
+				2A04557E24A670B300C6B572 /* Temperature.swift in Sources */,
 				2A1A11FC24A60410009370B5 /* SceneDelegate.swift in Sources */,
+				2A04558224A6792D00C6B572 /* ThreeFieldVerticalContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

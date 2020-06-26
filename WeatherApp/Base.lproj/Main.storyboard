@@ -109,7 +109,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="3Og-OJ-7i4" firstAttribute="leading" secondItem="329-Wt-282" secondAttribute="leading" id="Lxt-oD-Kyt"/>
                                             <constraint firstAttribute="height" constant="40" id="ggO-Hi-Gti"/>
@@ -187,6 +186,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="354" height="318"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzA-rX-w4g" userLabel="Selected Hour C. Shadow">
+                                <rect key="frame" x="92" y="-10" width="170" height="338"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="Qep-Pk-PZC"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BNv-dP-5Of">
                                 <rect key="frame" x="0.0" y="0.0" width="354" height="318"/>
                                 <subviews>
@@ -219,15 +225,18 @@
                                     <constraint firstItem="nCI-Jr-WqI" firstAttribute="centerY" secondItem="BNv-dP-5Of" secondAttribute="centerY" id="G44-L7-u5G"/>
                                     <constraint firstItem="X7Y-VM-GCA" firstAttribute="centerX" secondItem="BNv-dP-5Of" secondAttribute="centerX" id="ftd-Gr-hCH"/>
                                     <constraint firstItem="nCI-Jr-WqI" firstAttribute="top" secondItem="BNv-dP-5Of" secondAttribute="top" constant="50" id="gVE-IV-kaw"/>
+                                    <constraint firstItem="X7Y-VM-GCA" firstAttribute="top" secondItem="BNv-dP-5Of" secondAttribute="top" id="lsj-i2-2v6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="BNv-dP-5Of" firstAttribute="leading" secondItem="Gal-H5-Uqe" secondAttribute="leading" id="7SM-GY-XjC"/>
                             <constraint firstItem="BNv-dP-5Of" firstAttribute="centerX" secondItem="fWy-9Y-6HQ" secondAttribute="centerX" id="fJi-QK-Kf8"/>
+                            <constraint firstItem="OzA-rX-w4g" firstAttribute="centerX" secondItem="fWy-9Y-6HQ" secondAttribute="centerX" id="ioW-7o-Xzs"/>
                             <constraint firstItem="BNv-dP-5Of" firstAttribute="centerY" secondItem="fWy-9Y-6HQ" secondAttribute="centerY" id="kTH-r9-its"/>
+                            <constraint firstItem="OzA-rX-w4g" firstAttribute="top" secondItem="BNv-dP-5Of" secondAttribute="top" constant="-10" id="m7X-e8-LDW"/>
                             <constraint firstItem="BNv-dP-5Of" firstAttribute="top" secondItem="fWy-9Y-6HQ" secondAttribute="top" id="uYa-JU-eIw"/>
+                            <constraint firstItem="OzA-rX-w4g" firstAttribute="centerY" secondItem="fWy-9Y-6HQ" secondAttribute="centerY" id="yO8-sJ-GFB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gal-H5-Uqe"/>
                     </view>
@@ -302,7 +311,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="GBL-R5-SeX" firstAttribute="centerY" secondItem="XfY-k2-gHY" secondAttribute="centerY" id="6Qd-J8-c5R"/>
                                             <constraint firstItem="GBL-R5-SeX" firstAttribute="centerX" secondItem="XfY-k2-gHY" secondAttribute="centerX" id="ska-Dl-Bvl"/>
@@ -318,7 +326,6 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="qui-R1-1mO" firstAttribute="leading" secondItem="dWG-8P-tP3" secondAttribute="leading" constant="20" id="CzP-ge-GYE"/>
                                             <constraint firstItem="qui-R1-1mO" firstAttribute="centerX" secondItem="dWG-8P-tP3" secondAttribute="centerX" id="exK-6r-21K"/>
@@ -335,7 +342,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="rmh-Z7-JpS" firstAttribute="centerY" secondItem="JA6-5x-GA6" secondAttribute="centerY" id="9m9-9l-Skf"/>
                                             <constraint firstItem="rmh-Z7-JpS" firstAttribute="centerX" secondItem="JA6-5x-GA6" secondAttribute="centerX" id="L9r-QC-rJH"/>
@@ -344,7 +350,6 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="R9b-cD-gYC" firstAttribute="top" secondItem="1f2-Uc-59a" secondAttribute="top" id="4n3-MV-DDj"/>
                             <constraint firstItem="R9b-cD-gYC" firstAttribute="leading" secondItem="1f2-Uc-59a" secondAttribute="leading" id="EJi-gG-V0V"/>
@@ -372,7 +377,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="106"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwD-8X-fgl" userLabel="Hour Background">
-                                                <rect key="frame" x="22.5" y="27.5" width="105" height="51.5"/>
+                                                <rect key="frame" x="34.5" y="31.5" width="81" height="43.5"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzO-UL-0o4" userLabel="Hour">
@@ -382,14 +387,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="bwD-8X-fgl" firstAttribute="leading" secondItem="LzO-UL-0o4" secondAttribute="leading" constant="-20" id="12o-S9-N0a"/>
+                                            <constraint firstItem="bwD-8X-fgl" firstAttribute="leading" secondItem="LzO-UL-0o4" secondAttribute="leading" constant="-8" id="12o-S9-N0a"/>
                                             <constraint firstItem="bwD-8X-fgl" firstAttribute="centerX" secondItem="3s2-nZ-L2t" secondAttribute="centerX" id="Dtv-lA-5oj"/>
                                             <constraint firstItem="LzO-UL-0o4" firstAttribute="centerY" secondItem="3s2-nZ-L2t" secondAttribute="centerY" id="KWi-xd-9H1"/>
                                             <constraint firstItem="LzO-UL-0o4" firstAttribute="centerX" secondItem="3s2-nZ-L2t" secondAttribute="centerX" id="Snc-07-tVo"/>
                                             <constraint firstItem="bwD-8X-fgl" firstAttribute="centerY" secondItem="3s2-nZ-L2t" secondAttribute="centerY" id="mSF-uZ-COD"/>
-                                            <constraint firstItem="bwD-8X-fgl" firstAttribute="top" secondItem="LzO-UL-0o4" secondAttribute="top" constant="-10" id="wMU-zh-jyh"/>
+                                            <constraint firstItem="bwD-8X-fgl" firstAttribute="top" secondItem="LzO-UL-0o4" secondAttribute="top" constant="-6" id="wMU-zh-jyh"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5S-lj-d4f" userLabel="Weather Icon Container">
@@ -402,7 +406,6 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="3tk-Jb-g88" firstAttribute="centerY" secondItem="g5S-lj-d4f" secondAttribute="centerY" id="4OM-eV-iAw"/>
                                             <constraint firstItem="3tk-Jb-g88" firstAttribute="centerX" secondItem="g5S-lj-d4f" secondAttribute="centerX" id="QFk-hJ-T1B"/>
@@ -419,7 +422,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="pDw-Fd-RI7" firstAttribute="centerX" secondItem="Twy-LI-Hb9" secondAttribute="centerX" id="30D-gf-8oZ"/>
                                             <constraint firstItem="pDw-Fd-RI7" firstAttribute="centerY" secondItem="Twy-LI-Hb9" secondAttribute="centerY" id="vGc-Nf-sm6"/>
@@ -428,7 +430,6 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sFQ-Tx-YK2" firstAttribute="centerY" secondItem="MZr-Et-osy" secondAttribute="centerY" id="AmM-gl-dCK"/>
                             <constraint firstItem="sFQ-Tx-YK2" firstAttribute="centerX" secondItem="MZr-Et-osy" secondAttribute="centerX" id="KBD-lb-N1K"/>
@@ -462,7 +463,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="OVO-8J-09T" firstAttribute="centerY" secondItem="gXv-DE-W7G" secondAttribute="centerY" id="EgR-YE-R6P"/>
                                             <constraint firstItem="OVO-8J-09T" firstAttribute="centerX" secondItem="gXv-DE-W7G" secondAttribute="centerX" id="PSs-rm-SmQ"/>
@@ -478,7 +478,6 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="zW5-ar-LYp" firstAttribute="centerY" secondItem="wy1-2M-Ka3" secondAttribute="centerY" id="CNp-cV-Nv8"/>
                                             <constraint firstItem="zW5-ar-LYp" firstAttribute="leading" secondItem="wy1-2M-Ka3" secondAttribute="leading" constant="10" id="kek-uX-sg7"/>
@@ -495,7 +494,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="toE-ru-OQR" firstAttribute="centerY" secondItem="fL4-nx-i2h" secondAttribute="centerY" id="fKV-sJ-G15"/>
                                             <constraint firstItem="toE-ru-OQR" firstAttribute="centerX" secondItem="fL4-nx-i2h" secondAttribute="centerX" id="kZb-oa-qaq"/>

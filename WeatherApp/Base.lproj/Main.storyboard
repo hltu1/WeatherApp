@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-Do-xmC">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-Do-xmC" userLabel="Main Container View">
                                 <rect key="frame" x="30" y="74" width="354" height="728"/>
                                 <connections>
                                     <segue destination="aAk-6r-hIO" kind="embed" id="HDl-tP-WfG"/>
@@ -40,14 +40,14 @@
         <scene sceneID="cOX-KC-SjP">
             <objects>
                 <viewController id="aAk-6r-hIO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jIK-sQ-tYi">
+                    <view key="view" contentMode="scaleToFill" id="jIK-sQ-tYi" userLabel="Main Container">
                         <rect key="frame" x="0.0" y="0.0" width="354" height="728"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eLJ-Ki-Uwl">
-                                <rect key="frame" x="0.0" y="44" width="354" height="684"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eLJ-Ki-Uwl" userLabel="Main Stack View">
+                                <rect key="frame" x="0.0" y="0.0" width="354" height="728"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gog-X8-8LP">
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gog-X8-8LP" userLabel="Top Container View">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="GaU-xm-Sgx"/>
@@ -56,14 +56,14 @@
                                             <segue destination="k7h-lz-Utq" kind="embed" id="5vq-pZ-z6f"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWH-Jj-XVx">
-                                        <rect key="frame" x="0.0" y="180" width="354" height="274"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWH-Jj-XVx" userLabel="Middle Container View">
+                                        <rect key="frame" x="0.0" y="180" width="354" height="318"/>
                                         <connections>
                                             <segue destination="5iX-zJ-EUj" kind="embed" id="jtQ-ZT-RZt"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-0A-Nfi">
-                                        <rect key="frame" x="0.0" y="484" width="354" height="200"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-0A-Nfi" userLabel="Bottom Container View">
+                                        <rect key="frame" x="0.0" y="528" width="354" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="i7l-ch-n72"/>
                                         </constraints>
@@ -77,7 +77,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="eLJ-Ki-Uwl" firstAttribute="leading" secondItem="2RZ-ds-WVy" secondAttribute="leading" id="915-rv-22A"/>
-                            <constraint firstItem="eLJ-Ki-Uwl" firstAttribute="top" secondItem="2RZ-ds-WVy" secondAttribute="top" id="SOC-M6-eqg"/>
+                            <constraint firstItem="eLJ-Ki-Uwl" firstAttribute="top" secondItem="jIK-sQ-tYi" secondAttribute="top" id="SOC-M6-eqg"/>
                             <constraint firstItem="eLJ-Ki-Uwl" firstAttribute="centerX" secondItem="jIK-sQ-tYi" secondAttribute="centerX" id="b2x-Pw-COa"/>
                             <constraint firstAttribute="bottom" secondItem="eLJ-Ki-Uwl" secondAttribute="bottom" id="tW0-23-daT"/>
                         </constraints>
@@ -92,53 +92,134 @@
         <scene sceneID="AUh-1Z-xEn">
             <objects>
                 <viewController id="q8q-0w-YN9" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OCz-53-T8I">
+                    <view key="view" contentMode="scaleToFill" id="OCz-53-T8I" userLabel="Forecast 5-day Container">
                         <rect key="frame" x="0.0" y="0.0" width="354" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Sbp-IT-cdU">
+                                <rect key="frame" x="0.0" y="0.0" width="354" height="200"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQP-zT-zRR" userLabel="Day 1 Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="200"/>
+                                        <connections>
+                                            <segue destination="Vcw-Iz-OYs" kind="embed" id="JzV-9O-mh2"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaZ-E5-U7e" userLabel="Day 2 Container View">
+                                        <rect key="frame" x="71" y="0.0" width="70.5" height="200"/>
+                                        <connections>
+                                            <segue destination="Vcw-Iz-OYs" kind="embed" id="j4y-Y9-drQ"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnH-qz-8e0" userLabel="Day 3 Container View">
+                                        <rect key="frame" x="141.5" y="0.0" width="71" height="200"/>
+                                        <connections>
+                                            <segue destination="Vcw-Iz-OYs" kind="embed" id="s8B-Lz-J1M"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xE9-Na-uvh" userLabel="Day 4 Container View">
+                                        <rect key="frame" x="212.5" y="0.0" width="70.5" height="200"/>
+                                        <connections>
+                                            <segue destination="Vcw-Iz-OYs" kind="embed" id="haB-ll-fR2"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJp-Zk-XpH" userLabel="Day 5 Container View">
+                                        <rect key="frame" x="283" y="0.0" width="71" height="200"/>
+                                        <connections>
+                                            <segue destination="Vcw-Iz-OYs" kind="embed" id="BaF-F7-rpW"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sbp-IT-cdU" firstAttribute="centerX" secondItem="OCz-53-T8I" secondAttribute="centerX" id="1Fs-sd-Vkr"/>
+                            <constraint firstItem="Sbp-IT-cdU" firstAttribute="centerY" secondItem="OCz-53-T8I" secondAttribute="centerY" id="Oox-Mm-QfP"/>
+                            <constraint firstItem="Sbp-IT-cdU" firstAttribute="leading" secondItem="Dhc-L0-xqR" secondAttribute="leading" id="woJ-lO-poQ"/>
+                            <constraint firstItem="Sbp-IT-cdU" firstAttribute="top" secondItem="OCz-53-T8I" secondAttribute="top" id="xgj-T6-HsL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Dhc-L0-xqR"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQf-M9-vK4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="315"/>
+            <point key="canvasLocation" x="1600" y="449"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Unl-mD-zDN">
             <objects>
                 <viewController id="5iX-zJ-EUj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fWy-9Y-6HQ">
-                        <rect key="frame" x="0.0" y="0.0" width="354" height="274"/>
+                    <view key="view" contentMode="scaleToFill" id="fWy-9Y-6HQ" userLabel="3-hour Weather Container">
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="318"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNv-dP-5Of">
+                                <rect key="frame" x="0.0" y="0.0" width="354" height="318"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-Jr-WqI" userLabel="Previous Hour Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="318"/>
+                                        <connections>
+                                            <segue destination="HIv-Ob-484" kind="embed" id="9N6-aw-6WO"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7Y-VM-GCA" userLabel="Selected Hour Container View">
+                                        <rect key="frame" x="102" y="0.0" width="150" height="318"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="06Y-eL-ylt"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="RW1-Zr-Oi7" kind="embed" id="TAX-xT-DUd"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32w-7n-iUc" userLabel="Next Hour Container View">
+                                        <rect key="frame" x="252" y="0.0" width="102" height="318"/>
+                                        <connections>
+                                            <segue destination="HIv-Ob-484" kind="embed" id="h2i-Ih-AvL"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="X7Y-VM-GCA" firstAttribute="centerY" secondItem="BNv-dP-5Of" secondAttribute="centerY" id="6Do-CH-nfN"/>
+                                    <constraint firstItem="X7Y-VM-GCA" firstAttribute="centerX" secondItem="BNv-dP-5Of" secondAttribute="centerX" id="ftd-Gr-hCH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BNv-dP-5Of" firstAttribute="leading" secondItem="Gal-H5-Uqe" secondAttribute="leading" id="7SM-GY-XjC"/>
+                            <constraint firstItem="BNv-dP-5Of" firstAttribute="centerX" secondItem="fWy-9Y-6HQ" secondAttribute="centerX" id="fJi-QK-Kf8"/>
+                            <constraint firstItem="BNv-dP-5Of" firstAttribute="centerY" secondItem="fWy-9Y-6HQ" secondAttribute="centerY" id="kTH-r9-its"/>
+                            <constraint firstItem="BNv-dP-5Of" firstAttribute="top" secondItem="fWy-9Y-6HQ" secondAttribute="top" id="uYa-JU-eIw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gal-H5-Uqe"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3N-Kq-zci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="121"/>
+            <point key="canvasLocation" x="1600" y="154"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EPz-mU-oaN">
             <objects>
                 <viewController id="k7h-lz-Utq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Eqd-sx-k1I">
+                    <view key="view" contentMode="scaleToFill" id="Eqd-sx-k1I" userLabel="Current Info Container">
                         <rect key="frame" x="0.0" y="0.0" width="354" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="25˚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM7-gP-TYL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="25˚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM7-gP-TYL" userLabel="Current Temperature">
                                 <rect key="frame" x="210" y="0.0" width="144" height="104"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Happy Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-AV-IvL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Happy Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-AV-IvL" userLabel="Current Location">
                                 <rect key="frame" x="0.0" y="0.0" width="210" height="22"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 26, 2020 Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF7-PV-cLh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 26, 2020 Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF7-PV-cLh" userLabel="Current Date">
                                 <rect key="frame" x="0.0" y="32" width="210" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -163,5 +244,77 @@
             </objects>
             <point key="canvasLocation" x="1600" y="-55"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Kdo-G6-JsJ">
+            <objects>
+                <viewController id="HIv-Ob-484" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1f2-Uc-59a" userLabel="Adjacent Hour Weather Container">
+                        <rect key="frame" x="0.0" y="0.0" width="102" height="318"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qui-R1-1mO" userLabel="Weather Icon">
+                                <rect key="frame" x="20" y="128" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qui-R1-1mO" secondAttribute="height" multiplier="1:1" id="Lsh-V3-jO4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qui-R1-1mO" firstAttribute="centerX" secondItem="1f2-Uc-59a" secondAttribute="centerX" id="3S7-1D-htx"/>
+                            <constraint firstItem="qui-R1-1mO" firstAttribute="leading" secondItem="1f2-Uc-59a" secondAttribute="leading" constant="20" id="9Es-91-PT9"/>
+                            <constraint firstItem="qui-R1-1mO" firstAttribute="centerY" secondItem="1f2-Uc-59a" secondAttribute="centerY" id="eDe-p3-tGZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Tt-rc-dit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="153"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8ci-Bl-9py">
+            <objects>
+                <viewController id="RW1-Zr-Oi7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MZr-Et-osy" userLabel="Selected Hour Weather Container">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="318"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHk-lW-fkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2112" y="494"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7fM-0q-gu7">
+            <objects>
+                <viewController id="Vcw-Iz-OYs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iag-r4-p9B" userLabel="Forecast Day Container">
+                        <rect key="frame" x="0.0" y="0.0" width="71" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-ed-RIz">
+                                <rect key="frame" x="10" y="74.5" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LcA-ed-RIz" secondAttribute="height" multiplier="1:1" id="SDw-bW-VEL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LcA-ed-RIz" firstAttribute="centerY" secondItem="iag-r4-p9B" secondAttribute="centerY" id="FFp-JC-8Tf"/>
+                            <constraint firstItem="LcA-ed-RIz" firstAttribute="leading" secondItem="iag-r4-p9B" secondAttribute="leading" constant="10" id="cAg-dL-gJo"/>
+                            <constraint firstItem="LcA-ed-RIz" firstAttribute="centerX" secondItem="iag-r4-p9B" secondAttribute="centerX" id="hL0-es-19h"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcw-mf-JHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="682"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JzV-9O-mh2"/>
+        <segue reference="9N6-aw-6WO"/>
+    </inferredMetricsTieBreakers>
 </document>

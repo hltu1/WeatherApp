@@ -24,9 +24,9 @@ class Weather {
     
     // default init.
     init() {
-        date        = Date.init()
-        weather     = .sunny
-        temperature = UnitTemperature.init(symbol: "˚")
+        date        = .init(timeIntervalSinceNow: .init(0))
+        weather     = .sunny // considering sunny weather as default
+        temperature = .init(symbol: "˚C") // Celsius degrees
     }
     
     // assign-all init.

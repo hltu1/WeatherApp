@@ -9,23 +9,28 @@
 import Foundation
 
 class Weather {
-    var date       : Date
-    var weather    : String // TODO: enum
-    var temperature: UnitTemperature
-    
-    enum <#name#> {
-        case <#case#>
+    enum Weathers {
+        case sunny
+        case cloudy
+        case rainy
+        case windy
+        case rainyWithThunder
+        case snowy
     }
+    
+    var date       : Date
+    var weather    : Weathers
+    var temperature: UnitTemperature
     
     // default init.
     init() {
         date        = Date.init()
-        weather     = ""
+        weather     = .sunny
         temperature = UnitTemperature.init(symbol: "˚")
     }
     
     // assign-all init.
-    init(date: Date, weather: String, temperature: UnitTemperature) {
+    init(date: Date, weather: Weathers, temperature: UnitTemperature) {
         self.date        = date
         self.weather     = weather
         self.temperature = temperature

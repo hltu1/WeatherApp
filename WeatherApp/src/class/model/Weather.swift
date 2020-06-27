@@ -9,6 +9,7 @@
 import Foundation
 
 enum Weathers {
+    case defaultWeather // used for initial state, checked for errors
     case sunny
     case cloudy
     case rainy
@@ -25,7 +26,7 @@ class Weather {
     // default init.
     init() {
         date        = .init(timeIntervalSinceNow: .init(0))
-        weather     = .sunny // considering sunny weather as default
+        weather     = .defaultWeather // TODO: handle default case for errors
         temperature = .init(symbol: "˚C") // Celsius degrees
     }
     

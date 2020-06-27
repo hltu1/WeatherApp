@@ -20,6 +20,7 @@
 		2A7364A624A71F7100F2EE2B /* ThreeFieldVerticalContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7364A524A71F7100F2EE2B /* ThreeFieldVerticalContainerVC.swift */; };
 		2A7364AB24A7240400F2EE2B /* BottomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7364AA24A7240400F2EE2B /* BottomVC.swift */; };
 		2A7364AD24A7569D00F2EE2B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7364AC24A7569D00F2EE2B /* Weather.swift */; };
+		2AA40D2C24A793B300978934 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA40D2B24A793B300978934 /* Requester.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2A7364A524A71F7100F2EE2B /* ThreeFieldVerticalContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeFieldVerticalContainerVC.swift; sourceTree = "<group>"; };
 		2A7364AA24A7240400F2EE2B /* BottomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomVC.swift; sourceTree = "<group>"; };
 		2A7364AC24A7569D00F2EE2B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		2AA40D2B24A793B300978934 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				2A7364A924A7215400F2EE2B /* VC */,
 				2A7364AE24A765D500F2EE2B /* model */,
+				2AA40D2B24A793B300978934 /* Requester.swift */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				2A7364AD24A7569D00F2EE2B /* Weather.swift in Sources */,
 				2A6B238A24A76B7D00351CFF /* MiddleVC.swift in Sources */,
+				2AA40D2C24A793B300978934 /* Requester.swift in Sources */,
 				2A1A11FE24A60410009370B5 /* ViewController.swift in Sources */,
 				2A7364A624A71F7100F2EE2B /* ThreeFieldVerticalContainerVC.swift in Sources */,
 				2A1A11FA24A60410009370B5 /* AppDelegate.swift in Sources */,

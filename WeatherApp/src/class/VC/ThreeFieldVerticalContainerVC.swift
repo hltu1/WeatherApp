@@ -9,15 +9,6 @@
 import UIKit
 
 class ThreeFieldVerticalContainerVC: UIViewController {
-
-    @IBOutlet weak var timeLabel       : UILabel!
-    @IBOutlet weak var weatherIcon     : UIImageView!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    
-    @IBOutlet weak var hourBackground: UIView!
-    @IBOutlet      var selectedHourWeatherContainerView: UIView!
-    
-    // methods
     
     enum ContainerType {
         case defaultType
@@ -26,20 +17,37 @@ class ThreeFieldVerticalContainerVC: UIViewController {
         case forecastDay
     }
     
+    @IBOutlet weak var timeLabel       : UILabel!
+    @IBOutlet weak var weatherIcon     : UIImageView!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    
+    @IBOutlet weak var hourBackground: UIView!
+    @IBOutlet      var selectedHourWeatherContainerView: UIView!
+    
+    static var id: Int = 0
+    var selfId: Int = 0
     var containerType: ContainerType = .defaultType
+    
+    // methods
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        selfId = ThreeFieldVerticalContainerVC.id
+        ThreeFieldVerticalContainerVC.id += 1
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         switch self.title {
-            case "selectedHour":
+            case "SelectedHour":
                 self.containerType = .selectedHour
-            case "adjacentHour":
+            case "AdjacentHour":
                 self.containerType = .adjacentHour
-            case "forecastDay":
+            case "ForecastDay":
                 self.containerType = .forecastDay
             default:
-                break
+                print("title error for " + (self.title ?? "---"))
         }
         
         // no need for default since all cases are handled
@@ -51,8 +59,20 @@ class ThreeFieldVerticalContainerVC: UIViewController {
                 temperatureLabel.text = "19°"
             }
             case .adjacentHour: do {
+                
+                switch self.selfId {
+                    case 0: do {
+                        temperatureLabel.text = "10°"
+                    }
+                    case 1: do {
+                        temperatureLabel.text = "12°"
+                    }
+                    default: do {
+                        temperatureLabel.text = "17°"
+                        print("tag error for tag ", self.selfId)
+                    }
+                }
                 timeLabel.text = "19:00" // TODO: parameterize/handle
-                temperatureLabel.text = "17°"
             }
             case .forecastDay: do {
                 timeLabel.text = "sun" // TODO: parameterize/handle

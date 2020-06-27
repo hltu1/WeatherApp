@@ -206,7 +206,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-Jr-WqI" userLabel="Previous Hour Container View">
                                         <rect key="frame" x="0.0" y="50" width="102" height="218"/>
                                         <connections>
-                                            <segue destination="HIv-Ob-484" kind="embed" id="9N6-aw-6WO"/>
+                                            <segue destination="HIv-Ob-484" kind="embed" identifier="" id="9N6-aw-6WO"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7Y-VM-GCA" userLabel="Selected Hour Container View">
@@ -221,7 +221,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32w-7n-iUc" userLabel="Next Hour Container View">
                                         <rect key="frame" x="252" y="50" width="102" height="218"/>
                                         <connections>
-                                            <segue destination="HIv-Ob-484" kind="embed" id="h2i-Ih-AvL"/>
+                                            <segue destination="HIv-Ob-484" kind="embed" identifier="" id="h2i-Ih-AvL"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -302,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="1600" y="-55"/>
         </scene>
-        <!--adjacentHour-->
+        <!--AdjacentHour-->
         <scene sceneID="Kdo-G6-JsJ">
             <objects>
-                <viewController title="adjacentHour" id="HIv-Ob-484" customClass="ThreeFieldVerticalContainerVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AdjacentHour" id="HIv-Ob-484" customClass="ThreeFieldVerticalContainerVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1f2-Uc-59a" userLabel="Adjacent Hour Weather Container">
                         <rect key="frame" x="0.0" y="0.0" width="102" height="218"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="2332" y="-78"/>
         </scene>
-        <!--selectedHour-->
+        <!--SelectedHour-->
         <scene sceneID="8ci-Bl-9py">
             <objects>
-                <viewController title="selectedHour" id="RW1-Zr-Oi7" customClass="ThreeFieldVerticalContainerVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SelectedHour" id="RW1-Zr-Oi7" customClass="ThreeFieldVerticalContainerVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MZr-Et-osy" userLabel="Selected Hour Weather Container">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="318"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,12 +470,12 @@
             </objects>
             <point key="canvasLocation" x="2358" y="153"/>
         </scene>
-        <!--forecastDay-->
+        <!--ForecastDay-->
         <scene sceneID="7fM-0q-gu7">
             <objects>
-                <viewController title="forecastDay" id="Vcw-Iz-OYs" customClass="ThreeFieldVerticalContainerVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ForecastDay" id="Vcw-Iz-OYs" customClass="ThreeFieldVerticalContainerVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iag-r4-p9B" userLabel="Forecast Day Container">
-                        <rect key="frame" x="0.0" y="0.0" width="65" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="65" height="136.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="frS-Y7-anY">

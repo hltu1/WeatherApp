@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForecastContainerVC: UIViewController {
+class BottomVC: UIViewController {
 
     @IBOutlet var forecastContainer: UIView!
     

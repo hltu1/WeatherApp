@@ -1,5 +1,5 @@
 //
-//  ThreeFieldVerticalContainerVC.swift
+//  TopVC.swift
 //  WeatherApp
 //
 //  Created by Halit Uğurgelen on 27.06.2020.
@@ -8,27 +8,23 @@
 
 import UIKit
 
-class ThreeFieldVerticalContainerVC: UIViewController {
+class TopVC: UIViewController {
 
-    @IBOutlet weak var timeLabel       : UILabel!
-    @IBOutlet weak var weatherIcon     : UIImageView!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    
-    @IBOutlet weak var hourBackground: UIView!
-    
-    // methods
+    @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var currentLocationLabel   : UILabel!
+    @IBOutlet weak var currentDateLabel       : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if hourBackground != nil {
-            hourBackground.layer.cornerRadius = 20
-        }
         
-        timeLabel.text = "09:00" // TODO: put day info in forecast container
+        currentTemperatureLabel.text = "66˚F"
+        currentLocationLabel   .text = "A Fancy Land"
+        currentDateLabel       .text = "Apr 01, 2010 Wednesday"
     }
     
+
     /*
     // MARK: - Navigation
 

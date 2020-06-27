@@ -8,16 +8,16 @@
 
 import Foundation
 
+enum Weathers {
+    case sunny
+    case cloudy
+    case rainy
+    case windy
+    case rainyWithThunder
+    case snowy
+}
+
 class Weather {
-    enum Weathers {
-        case sunny
-        case cloudy
-        case rainy
-        case windy
-        case rainyWithThunder
-        case snowy
-    }
-    
     var date       : Date
     var weather    : Weathers
     var temperature: UnitTemperature

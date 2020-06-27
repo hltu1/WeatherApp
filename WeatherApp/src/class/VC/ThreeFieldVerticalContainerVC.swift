@@ -10,6 +10,10 @@ import UIKit
 
 class ThreeFieldVerticalContainerVC: UIViewController {
 
+    @IBOutlet weak var timeLabel       : UILabel!
+    @IBOutlet weak var weatherIcon     : UIImageView!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    
     @IBOutlet weak var hourBackground: UIView!
     
     // methods
@@ -22,6 +26,15 @@ class ThreeFieldVerticalContainerVC: UIViewController {
         hourBackground.layer.cornerRadius = 20
     }
     
+    init() {
+        
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     
     /*

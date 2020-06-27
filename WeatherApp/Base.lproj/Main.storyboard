@@ -365,6 +365,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OqQ-dL-dKX"/>
                     </view>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="rmh-Z7-JpS" id="0XY-9T-Q0L"/>
+                        <outlet property="timeLabel" destination="GBL-R5-SeX" id="yBa-Lj-S4W"/>
+                        <outlet property="weatherIcon" destination="qui-R1-1mO" id="KLf-Lr-FZW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Tt-rc-dit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

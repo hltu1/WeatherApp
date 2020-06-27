@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7364A924A7215400F2EE2B /* VC */,
-				2A7364AC24A7569D00F2EE2B /* Weather.swift */,
+				2A7364AE24A765D500F2EE2B /* model */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -159,6 +159,14 @@
 				2A7364AA24A7240400F2EE2B /* ForecastContainerVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		2A7364AE24A765D500F2EE2B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2A7364AC24A7569D00F2EE2B /* Weather.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

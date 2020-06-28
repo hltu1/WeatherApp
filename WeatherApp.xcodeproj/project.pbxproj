@@ -21,6 +21,7 @@
 		2A7364AB24A7240400F2EE2B /* BottomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7364AA24A7240400F2EE2B /* BottomVC.swift */; };
 		2A7364AD24A7569D00F2EE2B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7364AC24A7569D00F2EE2B /* Weather.swift */; };
 		2AA40D2C24A793B300978934 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA40D2B24A793B300978934 /* Requester.swift */; };
+		2AE11F6F24A89924007CACD1 /* WeatherStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE11F6E24A89923007CACD1 /* WeatherStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		2A7364AA24A7240400F2EE2B /* BottomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomVC.swift; sourceTree = "<group>"; };
 		2A7364AC24A7569D00F2EE2B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2AA40D2B24A793B300978934 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		2AE11F6E24A89923007CACD1 /* WeatherStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7364AC24A7569D00F2EE2B /* Weather.swift */,
+				2AE11F6E24A89923007CACD1 /* WeatherStorage.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				2A1A11FE24A60410009370B5 /* ViewController.swift in Sources */,
 				2A7364A624A71F7100F2EE2B /* ThreeFieldVerticalContainerVC.swift in Sources */,
 				2A1A11FA24A60410009370B5 /* AppDelegate.swift in Sources */,
+				2AE11F6F24A89924007CACD1 /* WeatherStorage.swift in Sources */,
 				2A1A11FC24A60410009370B5 /* SceneDelegate.swift in Sources */,
 				2A6B238824A76B6C00351CFF /* TopVC.swift in Sources */,
 				2A7364AB24A7240400F2EE2B /* BottomVC.swift in Sources */,

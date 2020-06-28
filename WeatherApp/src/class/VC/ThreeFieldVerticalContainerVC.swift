@@ -17,6 +17,12 @@ class ThreeFieldVerticalContainerVC: UIViewController {
         case forecastDay
     }
     
+    enum AdjacentHourSide {
+        case defaultSide
+        case previous
+        case next
+    }
+    
     @IBOutlet weak var timeLabel       : UILabel!
     @IBOutlet weak var weatherIcon     : UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -85,6 +91,33 @@ class ThreeFieldVerticalContainerVC: UIViewController {
         
         
     }
+    
+    @IBAction func didTap(_ sender: Any) {
+        switch adjacentHourID {
+            case 0: do {
+                rollHours(to: .previous)
+            }
+            case 1: do {
+                rollHours(to: .next)
+            }
+            default:
+                break
+        }
+    }
+    
+    func rollHours(to side: AdjacentHourSide) {
+        switch side {
+            case .previous: do {
+                
+            }
+            case .next: do {
+                
+            }
+            default:
+                break
+        }
+    }
+    
     
     /*
     // MARK: - Navigation

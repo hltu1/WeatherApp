@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Weathers {
+enum WeatherType {
     case defaultWeather // used for initial state, checked for errors
     case sunny
     case cloudy
@@ -20,7 +20,7 @@ enum Weathers {
 
 class Weather {
     var date       : Date
-    var weather    : Weathers
+    var weather    : WeatherType
     var temperature: UnitTemperature
     
     // default init.
@@ -31,7 +31,7 @@ class Weather {
     }
     
     // assign-all init.
-    init(date: Date, weather: Weathers, temperature: UnitTemperature) {
+    init(date: Date, weather: WeatherType, temperature: UnitTemperature) {
         self.date        = date
         self.weather     = weather
         self.temperature = temperature

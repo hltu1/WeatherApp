@@ -29,7 +29,29 @@ class ThreeFieldVerticalContainerVC: UIViewController {
     
     var delegate: TFVCDelegate?
     
-    var weather: Weather = .init()
+    private var _weather: Weather = .init()
+    var weather: Weather {
+        get {
+            return self._weather
+        }
+        set(input) {
+            self._weather = input
+            
+            // update contents of IBOutlets
+            
+            timeLabel.text = { () -> String in
+                var hourString: String
+                let dateFormatter: DateFormatter = .init()
+                dateFormatter.dateFormat = "HH:00"
+                hourString = dateFormatter.string(from: input.date)
+                return hourString
+            }()
+            
+            // weatherIcon = ...
+            
+            temperatureLabel.text = String(input.temperature) + "°"
+        }
+    }
     
     @IBOutlet weak var timeLabel       : UILabel!
     @IBOutlet weak var weatherIcon     : UIImageView!
@@ -38,10 +60,20 @@ class ThreeFieldVerticalContainerVC: UIViewController {
     @IBOutlet weak var hourBackground: UIView!
     @IBOutlet      var selectedHourWeatherContainerView: UIView!
     
-    var containerType: ContainerType = .defaultType
+    var containerType   : ContainerType    = .defaultType
     var adjacentHourSide: AdjacentHourSide = .defaultSide
     
     // methods
+    
+    init() { super.init(nibName: nil, bundle: nil) }
+    init(weather: Weather) {
+        super.init(nibName: nil, bundle: nil)
+        self.weather = weather
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +86,7 @@ class ThreeFieldVerticalContainerVC: UIViewController {
             case "ForecastDay":
                 self.containerType = .forecastDay
             default:
-                print("title error for " + (self.title ?? "---"))
+                break
         }
         
         // no need for default since all cases are handled

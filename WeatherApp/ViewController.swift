@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        var weatherStorage: WeatherStorage = .init()
+        let weatherStorage: WeatherStorage = .init()
         
         // dummy data for test
         for dayCounter in 0...4 {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
                 let weatherType: WeatherType = WeatherType(rawValue: UInt.random(in: 1...6))!
                 
                 let weather = Weather.init(date: today, weather: weatherType, temperature: temp)
-                weatherStorage[dayCounter][hourCounter] = weather
+                weatherStorage[dayCounter, hourCounter] = weather
             }
         }
     }

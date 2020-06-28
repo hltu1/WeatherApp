@@ -8,6 +8,16 @@
 
 import UIKit
 
+protocol TFVCDelegate {
+    func tapSignalHandling(side: AdjacentHourSide)
+}
+
+enum AdjacentHourSide {
+    case defaultSide
+    case previous
+    case next
+}
+
 class ThreeFieldVerticalContainerVC: UIViewController {
     
     enum ContainerType {
@@ -17,11 +27,9 @@ class ThreeFieldVerticalContainerVC: UIViewController {
         case forecastDay
     }
     
-    enum AdjacentHourSide {
-        case defaultSide
-        case previous
-        case next
-    }
+    var delegate: TFVCDelegate?
+    
+    var weather: Weather = .init()
     
     @IBOutlet weak var timeLabel       : UILabel!
     @IBOutlet weak var weatherIcon     : UIImageView!
@@ -31,8 +39,7 @@ class ThreeFieldVerticalContainerVC: UIViewController {
     @IBOutlet      var selectedHourWeatherContainerView: UIView!
     
     var containerType: ContainerType = .defaultType
-    var adjacentHourID: UInt = 0
-    static var adjacentHourIDCounter: UInt = 0
+    var adjacentHourSide: AdjacentHourSide = .defaultSide
     
     // methods
     
@@ -59,13 +66,11 @@ class ThreeFieldVerticalContainerVC: UIViewController {
                 temperatureLabel.text = "19°"
             }
             case .adjacentHour: do {
-                adjacentHourID = ThreeFieldVerticalContainerVC.adjacentHourIDCounter
-                ThreeFieldVerticalContainerVC.adjacentHourIDCounter += 1
                 
-                switch adjacentHourID {
-                    case 0:
+                switch adjacentHourSide {
+                    case .previous:
                         temperatureLabel.text = "10°"
-                    case 1:
+                    case .next:
                         temperatureLabel.text = "12°"
                     default:
                         temperatureLabel.text = "17°"
@@ -86,47 +91,9 @@ class ThreeFieldVerticalContainerVC: UIViewController {
             hourBackground.layer.cornerRadius = 20
             selectedHourWeatherContainerView.layer.cornerRadius = 40
         }
-        
-        
-        
-        
     }
     
     @IBAction func didTap(_ sender: Any) {
-        switch adjacentHourID {
-            case 0: do {
-                rollHours(to: .previous)
-            }
-            case 1: do {
-                rollHours(to: .next)
-            }
-            default:
-                break
-        }
+        delegate?.tapSignalHandling(side: adjacentHourSide)
     }
-    
-    func rollHours(to side: AdjacentHourSide) {
-        switch side {
-            case .previous: do {
-                
-            }
-            case .next: do {
-                
-            }
-            default:
-                break
-        }
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

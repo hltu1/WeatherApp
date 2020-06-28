@@ -11,6 +11,15 @@ import Foundation
 class WeatherStorage {
     private var weathers: [[Weather]] = [[]]
     
+    init() {
+        for day in 0...4 {
+            weathers.insert([], at: day)
+            for hour in 0...23 {
+                weathers[day].insert(.init(), at: hour) // initialize with empty Weathers
+            }
+        }
+    }
+    
     subscript(index: Int) -> [Weather] {
         get {
             return weathers[index % 5]

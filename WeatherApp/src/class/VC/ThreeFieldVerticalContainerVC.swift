@@ -24,17 +24,11 @@ class ThreeFieldVerticalContainerVC: UIViewController {
     @IBOutlet weak var hourBackground: UIView!
     @IBOutlet      var selectedHourWeatherContainerView: UIView!
     
-    static var id: Int = 0
-    var selfId: Int = 0
     var containerType: ContainerType = .defaultType
+    var adjacentHourID: UInt = 0
+    static var adjacentHourIDCounter: UInt = 0
     
     // methods
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        selfId = ThreeFieldVerticalContainerVC.id
-        ThreeFieldVerticalContainerVC.id += 1
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,18 +53,16 @@ class ThreeFieldVerticalContainerVC: UIViewController {
                 temperatureLabel.text = "19°"
             }
             case .adjacentHour: do {
+                adjacentHourID = ThreeFieldVerticalContainerVC.adjacentHourIDCounter
+                ThreeFieldVerticalContainerVC.adjacentHourIDCounter += 1
                 
-                switch self.selfId {
-                    case 0: do {
+                switch adjacentHourID {
+                    case 0:
                         temperatureLabel.text = "10°"
-                    }
-                    case 1: do {
+                    case 1:
                         temperatureLabel.text = "12°"
-                    }
-                    default: do {
+                    default:
                         temperatureLabel.text = "17°"
-                        print("tag error for tag ", self.selfId)
-                    }
                 }
                 timeLabel.text = "19:00" // TODO: parameterize/handle
             }

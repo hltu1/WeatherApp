@@ -12,20 +12,5 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        let weatherStorage: WeatherStorage = .init()
-        
-        // dummy data for test
-        for dayCounter in 0...4 {
-            for hourCounter in 0...23 {
-                let today: Date = .init(timeIntervalSinceNow: .init(86400 * dayCounter))
-                let temp : Int = (dayCounter * 24) + hourCounter
-                let weatherType: WeatherType = WeatherType(rawValue: UInt.random(in: 1...6))!
-                
-                let weather = Weather.init(date: today, weather: weatherType, temperature: temp)
-                weatherStorage[dayCounter, hourCounter] = weather
-            }
-        }
     }
 }

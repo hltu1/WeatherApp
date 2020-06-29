@@ -56,7 +56,7 @@ class MiddleVC: UIViewController, TFVCDelegate {
          * must be possessed to transfer the data.
          */
         
-        print(side)
+        rollHours(to: side)
         
         // switch (pressedSide) {
         //     case .previous: do {
@@ -86,19 +86,26 @@ class MiddleVC: UIViewController, TFVCDelegate {
     
     func rollHours(to side: AdjacentHourSide) {
         
-        let leftView  : UIView = previousAdjacentHourContainerReference.view
-        let middleView: UIView = selectedHourContainerReference.view
-        let rightView : UIView = nextAdjacentHourContainerReference.view
-        
-        
+        let   leftView: UIView = previousAdjacentHourContainerReference.view
+        let middleView: UIView =         selectedHourContainerReference.view
+        let  rightView: UIView =     nextAdjacentHourContainerReference.view
         
         switch side {
             case .previous: do {
                 
-                leftView.subviews[0]
+                // leftView.subviews[0]
+                previousAdjacentHourContainerReference.view = middleView
+                        selectedHourContainerReference.view =  rightView
+                
+                nextAdjacentHourContainerReference = .init(weather: Requester.weatherStorage[0, 1])
+                
+                // nextAdjacentHourContainerReference.view.subviews
+                
             }
             case .next: do {
-                
+                nextAdjacentHourContainerReference.view = middleView
+                    selectedHourContainerReference.view =   leftView
+                // previousAdjacentHourContainerReference.view =
             }
             default:
                 break
